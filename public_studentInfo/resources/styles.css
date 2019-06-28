@@ -1,0 +1,52 @@
+/* @nanajjar */
+.main{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+table{background: #2E4CF3; color: #FFFFFF;}
+#student{ width: 40%;align-content: center;
+}
+table tr td{text-align: center; background: lightblue; color: #2E4CF3;
+}
+
+
+
+body {
+  font-family: Arial;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+form.example input[type=text] {
+
+  font-size: 17px;
+  border: 1px solid grey;
+  width: 60%;
+    display: inline-block;
+  background: #f1f1f1;
+}
+
+form.example button {
+display: block;
+    width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}

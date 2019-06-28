@@ -1,0 +1,139 @@
+<% include partials/header.ejs %>
+
+<body>
+
+    <h1> This is the Student Information home page </h1>
+
+    <p>
+        Welcome
+    </p>
+    <p>
+        <form action="/studentInfo" method="GET">
+            <table>
+                <tr>
+                    <td>
+                        <label>First Name:</label></td>
+                    <td>
+                        <input type="text" name="firstName" size="40" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Last Name:</label></td>
+                    <td>
+                        <input type="text" name="lastName" size="40" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Degree:</label></td>
+                    <td>
+                        <input type="text" name="degree" size="40" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Program:</label>
+                    </td>
+                    <td>
+                        <input type="text" name="program" size="40" />
+                    </td>
+                </tr>
+            </table>
+
+            <input type="submit" value="Get Info" />
+
+        </form>
+    
+    <br>
+<button onclick="myFunction()">See all Students in DB</button>
+  <br>  
+<div id="myDIV">
+    <table id="student" >
+    <tr>
+      <th>First Name</th>
+      <% for(var i=0; i< students.length;i++){  %>
+        <td>
+        <%= students[i].firstName  %> 
+        </td>
+        <% }%>
+    </tr>
+        
+        
+           <tr>
+      <th>Last Name</th>
+      <% for(var i=0; i< students.length;i++){  %>
+        <td>
+        <%= students[i].lastName  %> 
+        </td>
+        <% }%>
+    </tr>
+    
+    </table>
+    
+
+</div>
+      <br>
+        <div>
+        <form action="/" method="GET">
+            <table>
+                <tr>
+                    <td>
+                        <label>Enter First Name:</label></td>
+                    <td>
+                        <input type="text" name="firstName" size="20" />
+                    </td>
+                </tr>
+          
+            </table>
+
+            <input type="submit" value="Find by first name" />
+
+        </form>
+
+        </div>
+<div id="myDI2V">
+    <table id="student" >
+    <tr>
+      <th>First Name</th>
+        <td>
+         <%= found  %> 
+
+        </td>
+     
+    </tr>
+        
+        
+    
+    </table>
+    
+
+</div>
+   
+    
+<script>
+    function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+};
+      function myFunction2() {
+  var x = document.getElementById("myDIV2");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+};
+    
+    </script>
+
+
+    </p>
+
+</body>
+
+</html>
